@@ -5,17 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Almary Pacheco</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
 
-<body>
+<body class="dark">
     <header>
-        <a id="nombre" href="#inicio">Almary <br> Pacheco</a>
+        <img class="logo" src="./img/_Logo_MIO__1_-removebg-preview.png" alt="">
+        <button id="menu-button">
+            <i class="bi bi-list" id="menu-hamburguesa"></i>
+            <i class="bi bi-x-lg" id="menu-cerrar"></i>
+        </button>
         <nav>
             <ul id="menu">
-                <li class="menu-li"><a href="#inicio">Inicio</a></li>
+                <li class="menu-li active"><a href="#inicio">Inicio</a></li>
                 <li class="menu-li"><a href="#contacto">Contacto</a></li>
             </ul>
+            <label for="toggle" id="label-toggle"><i class="bi bi-moon-fill"></i></label>
+            <input type="checkbox" id="toggle">
+
         </nav> 
     </header>
 
@@ -25,9 +33,9 @@
                 <img class="yo" src="./img/WhatsApp Image 2023-06-19 at 17.16.45.jpeg" alt="Foto personal">
             </figure>
             <article class="presentacion">
-                <h1>Hola! Soy <span>Almary</span></h1>
-                <p>Tengo 20 años de edad, emigre hace 5 años de mi pais Venezuela y actualmente vivo en Buenos Aires, Argentina. Me encuentro estudiando Programacion Frontend y Diseño UX/UI. </p>
-                <p>Quiero incorporar todos los conocimientos necesarios, prepararme y poder aprender cada dia mas sobre el mundo de la tecnologia.</p>
+                <h1>Hola, Soy <span>Almary!</span></h1>
+                <p class="parrafo-presentacion">Tengo 20 años de edad, emigre hace 5 años de mi pais Venezuela y actualmente vivo en Buenos Aires, Argentina. Me encuentro estudiando Programacion Frontend y Diseño UX/UI. </p>
+                <p class="parrafo-presentacion">Quiero incorporar todos los conocimientos necesarios, prepararme y poder aprender cada dia mas sobre el mundo de la tecnologia.</p>
                 <a class="button" download="curriculum.pdf" href="./pdf/Copia de Curriculum, Almary Pacheco..pdf">Descargar CV</a>
             </article>
         </section>
@@ -53,8 +61,6 @@
     <footer>
         <p>Derechos reservados</p>
     </footer>
-    <!-- La estructura básica y la vinculación con CSS estan listas. A codear! 💪  -->
-    <!-- En este archivo escriban su HTML -->
-
+    <script src="./js/main.js"></script>
 </body>
 </html>

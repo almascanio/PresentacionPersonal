@@ -11,12 +11,34 @@
     scroll-behavior: smooth;
 }
 
+/* Modo oscuro  */
+
+#toggle{
+    display: none;
+}
+
+#label-toggle{
+    font-size: 30px;
+    color: #400101;
+    cursor: pointer;
+    display: flex;
+    justify-content: end;
+}
+
+.dark{
+    background-color: #400101;
+    color: #ffffff;
+    transition: all 2s ease;
+}
+
+/* Body general */
+
 body{
     background-color: #fbfbfb;
     font-family: 'Lato', sans-serif;
     font-size: 18px;
     line-height: 1.2;
-    color: #0f0f0f;
+    color: #400101;
 }
 
 /* Header */
@@ -25,42 +47,85 @@ header{
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: 90px;
-    padding: 10px;
+    height: 150px;
+    padding: 20px;
     top: 0;
     left: 0;
     position: fixed;
     background-color: #fbfbfb;
-    box-shadow: 0px 30px 10px -20px #c0c0c0;
+    box-shadow: 0px 20px 25px -25px #400101;
 }
 
-#nombre{
-    width: 120px;
-    font-size: 30px;
-    font-weight: 700;
-    color: #af599e;
-    margin: 0px 0px 0px 10px;
+.logo{
+    width: 200px;
+    height: 200px;
 }
 
 #menu {
     display: flex;
-    list-style: none;
-    font-size: 22px;
+    font-size: 18px;
 }
 
-.menu-li{
-    margin-bottom: 25px;
-    padding: 20px;
+.menu-li a{
+    padding: 16px;
     display: inline-block;
-}
-
-.menu-li:hover{
-    color: #af599e;
-}
-
-a {
     text-decoration: none;
-    color: inherit;
+    color: #400101;
+    border-radius: 10px;
+}
+
+.menu-li:hover, .active{
+    background-color: #F2CBC2;
+    color: #ffffff;
+}
+nav{
+    display: none;
+}
+#menu-button{
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    font-size: 30px;
+    width: 40%;
+    height: 40%;
+}
+
+i#menu-cerrar{
+    display: none;
+}
+
+/* Estilos del menu hamburguesa */
+
+body.menu-mobile{
+    overflow: hidden;
+}
+
+body.menu-mobile i#menu-cerrar{
+    display: block;
+}
+
+body.menu-mobile i#menu-hamburguesa{
+    display: none;
+}
+
+body.menu-mobile header{
+    height: 60%;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    transition: height 0.4s;
+}
+
+body.menu-mobile nav{
+    display: block;
+    width: 100%;
+    height: 10px;
+}
+
+body.menu-mobile ul#menu{
+    flex-direction: column;
+    align-items: end;
+    justify-content: space-evenly;
+    height: 10%;
 }
 
 /* Main */
@@ -74,7 +139,7 @@ section{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 80px;
+    margin-top: 150px;
     padding: 20px;
     min-height: 100vh;
 }
@@ -88,9 +153,10 @@ section{
 }
 
 .yo{
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
+    box-shadow: 0 0 30px #F2CBC2;
 }
 
 .presentacion{
@@ -106,10 +172,10 @@ h1{
 }
 
 span{
-    color: #af599e;
+    color: #D9ACA3;
 }
 
-p{
+.parrafo-presentacion{
     font-size: 18px;
     margin: 5px;
     padding: 5px;
@@ -117,8 +183,9 @@ p{
 }
 
 .button{
-    color: #fbfbfb;
-    background-color: #af599e;
+    color: #400101;
+    text-decoration: none;
+    background-color: #F2CBC2;
     font-size: 20px;
     font-weight: 700;
     padding: 18px 40px;
@@ -126,17 +193,17 @@ p{
     line-height: 1;
     border-radius: 30px;
     display: inline-block;
-    box-shadow: 0 0 5px #af599e;
+    box-shadow: 0 0 5px #F2CBC2;
 }
 
 .button:hover{
-    box-shadow: 0 0 5px #af599e, 0 0 20px #af599e;
+    box-shadow: 0 0 5px #F2CBC2, 0 0 20px #F2CBC2;
 }
 
 .hablemos{
     text-align: center;
     padding: 15px;
-    background: rgba(175, 89, 158, 0.3);
+    background: #d9aca37f;
     border-radius: 15px;
     max-width: 500px;
 }
@@ -174,26 +241,52 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #af599e;
+    background-color: #400101;
     color: #fbfbfb;
     height: 90px;
 }
 
+@media (min-width: 1024px) {
 
-/* Recomendaciones! 
-*  - Comenzar desde lo más general y luego ir hacia lo mas específico, asignando primero
-*    "estilos generales". Una buena idea sería comenzar por el <body> ;)
-*
-*  - Recuerden que queremos evitar "repetir código", en CSS usando la cualidad de la herencia
-*    podemos setear ciertas propiedades en un elemento padre y dejar que sean heredadas (por ejemplo: font-size)
-*
-*  - Nadie sabe todas las propiedades CSS de memoria, si no saben como hacer algo no lo recuerdan, la respuesta
-*    pueden encontrarla buscando en la web algo como "CSS como hacer ... " o "propiedad css para hacer ..."
-*
-*  - Usen mucho las herramientas para desarrolladores del navegador para ir
-*    probando el CSS que escriben, resolver dudas y problemas.
-*
-*  - Paciencia, resiliencia y creatividad! No se desanimen, las primeras experiencias maquetando con HTML y CSS
-*    pueden ser frustrantes, pero estas habilidades se van desarrollando con la experiencia, es como aprender
-*    un trabajo manual, hacer una artesanía, tocar un instrumento musical... la práctica es todo!
-*/
+    h1{
+        font-size: 50px;
+    }
+
+    .logo{
+        height: 350px;
+        width: 350px;
+    }
+
+    section{
+        margin-top: 50px;
+    }
+    
+    section#inicio{ 
+        flex-direction: row; 
+    }
+
+    article.presentacion{
+        text-align: left;
+        width: 70%;
+    }
+
+    .yo{
+        width: 450px;
+        height: 450px;
+    }
+
+    .parrafo-presentacion{
+        text-align: left;
+        margin-left: 10px;
+        padding-left: 10px;
+        font-size: 20px;
+    }
+
+    #menu-button{
+        display: none;
+    }
+
+    nav{
+        display: block;
+    }
+}
