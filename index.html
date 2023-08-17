@@ -9,9 +9,14 @@
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 
-<body class="dark">
+<body>
+    <!-- Loading para cargar la pagina -->
+    <div id="loading">
+        <div class="spinner"></div>
+    </div>
+    <!-- Header, y tambien menu hamburguesa para mobile -->
     <header>
-        <img class="logo" src="./img/_Logo_MIO__1_-removebg-preview.png" alt="">
+        <img class="logo" src="./img/_Logo_MIO__1_-removebg-preview.png" alt="Mi logo">
         <button id="menu-button">
             <i class="bi bi-list" id="menu-hamburguesa"></i>
             <i class="bi bi-x-lg" id="menu-cerrar"></i>
@@ -19,45 +24,60 @@
         <nav>
             <ul id="menu">
                 <li class="menu-li active"><a href="#inicio">Inicio</a></li>
+                <li class="menu-li"><a href="#herramientas">Herramientas</a></li>
                 <li class="menu-li"><a href="#contacto">Contacto</a></li>
             </ul>
-            <label for="toggle" id="label-toggle"><i class="bi bi-moon-fill"></i></label>
-            <input type="checkbox" id="toggle">
-
         </nav> 
     </header>
-
+    <!-- Main, seccion de inicio, herramientas y contacto -->
     <main>
+        <!-- Inicio -->
         <section id="inicio">
             <figure class="img-personal">
-                <img class="yo" src="./img/WhatsApp Image 2023-06-19 at 17.16.45.jpeg" alt="Foto personal">
+                <img class="yo" src="./img/Mi-foto.jpeg" alt="Foto personal">
             </figure>
             <article class="presentacion">
-                <h1>Hola, Soy <span>Almary!</span></h1>
-                <p class="parrafo-presentacion">Tengo 20 años de edad, emigre hace 5 años de mi pais Venezuela y actualmente vivo en Buenos Aires, Argentina. Me encuentro estudiando Programacion Frontend y Diseño UX/UI. </p>
+                <h1>Hola, Soy Almary!</h1>
+                <p class="parrafo-presentacion">Tengo 20 años de edad, emigre hace 5 años de mi pais Venezuela y actualmente vivo en Buenos Aires, Argentina. Me encuentro estudiando Programacion Frontend/Full Stack y Diseño UX/UI en Google.</p>
                 <p class="parrafo-presentacion">Quiero incorporar todos los conocimientos necesarios, prepararme y poder aprender cada dia mas sobre el mundo de la tecnologia.</p>
                 <a class="button" download="curriculum.pdf" href="./pdf/Copia de Curriculum, Almary Pacheco..pdf">Descargar CV</a>
             </article>
         </section>
-
+        <!-- Herramientas -->
+        <section id="herramientas">
+            <h2>HERRAMIENTAS QUE MANEJO:</h2>
+            <div id="caja">
+                <div><img src="./img/logo-html.png" alt="Logo de HTML"></div>
+                <div><img src="./img/logo-css.png" alt="Logo de CSS"></div>
+                <div><img src="./img/logo-js.png" alt="Logo de JavaScript"></div>
+                <div><img src="./img/bootstrap-logo.png" alt="Logo de Bootstrap"></div>
+                <div><img src="./img/Git-Logo.png" alt="Logo de Git"></div>
+                <div><img src="./img/GitHub-Logo.png" alt="Logo de GitHub"></div>
+                <div><img src="./img/figma-logo.png" alt="Logo de Figma"></div>
+                <div><img src="./img/vsc-logo.png" alt="Logo de Visual Studio Code"></div>
+                <div><img src="./img/React.png" alt="Logo de GitHub"></div>
+            </div>
+        </section>
+        <!-- Contacto -->
         <section id="contacto">
             <article class="hablemos">
-                <h2>Hablemos! </h2>
-                <p>Habilidades que me caracterizan y en las cuales me considero buena:</p>
+                <h3>HABILIDADES DESTACADAS:</h3>
                 <ol class="ol-contacto">
-                    <li>Responsable y muy planificadora</li>
-                    <li>Tengo empatia, soy colaboradora y me gusta escuchar</li>
-                    <li>Creativa y siempre busco aportar ideas diferentes</li>
+                    <li><strong>Responsabilidad:</strong> Abordo mis tareas y proyectos con eficiencia y precisión, asegurando su cumplimiento.</li>
+                    <li><strong>Compromiso:</strong> Me esfuerzo por dar lo mejor de mí en cada proyecto, buscando alcanzar buenos resultados.</li>
+                    <li><strong>Empatía:</strong> Mi capacidad para escuchar y comprender a los demás me permite trabajar de manera efectiva en equipo.</li>
+                    <li><strong>Creatividad:</strong>  Mi pasión por el arte y la tecnología me impulsa a explorar nuevas formas de abordar desafíos, creando experiencias excepcionales y fáciles de usar. </li>
+                    <li><strong>Flexibilidad:</strong> Mi disposición para aprender nuevas habilidades y adaptarme me permite afrontar cualquier desafío con confianza.</li>
                 </ol>
             </article>
             <ul>
-                <li><a target="_blank" href=""><img src="./img/mail.png" alt="Foto sobre el icono de mail"></a></li>
-                <li><a target="_blank" href="https://github.com/almascanio"><img src="./img/github.png" alt="Foto sobre el icono de github"></a></li>
-                <li><a target="_blank" href="https://www.linkedin.com/in/almary-pacheco-92b25a267/"><img src="./img/linkedin.png" alt="Foto sobre el icono de linkedin"></a></li>
+                <a class="iconos" target="_blank" href="mailto:almascani08@gmail.com"><i class="bi bi-envelope-at-fill"></i></a>
+                <a class="iconos" target="_blank" href="https://github.com/almascanio"><i class="bi bi-github"></i></a>
+                <a class="iconos" target="_blank" href="https://www.linkedin.com/in/almary-pacheco-92b25a267/"><i class="bi bi-linkedin"></i></a>
             </ul>
         </section>
     </main>
-
+    <!--  Footer -->
     <footer>
         <p>Derechos reservados</p>
     </footer>
